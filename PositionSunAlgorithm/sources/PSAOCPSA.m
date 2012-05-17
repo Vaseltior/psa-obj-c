@@ -36,20 +36,19 @@
 
 @implementation PSAOCPSA
 
-+ (PSAOCAzimuthZenithAngle *)computeSolarPositionWithDate:(NSDate *)date 
++ (PSAOCAzimuthZenithAngle *)computeSolarPositionWithDate:(NSDate *)date
                                                  latitude:(double)latitude
                                                 longitude:(double)longitude {
-    
     NSCalendar * utcTime = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSTimeZone * zone = [NSTimeZone timeZoneWithName:@"GMT"];
     [utcTime setTimeZone:zone];
-    
-    NSDateComponents * dc = [utcTime components:(NSHourCalendarUnit|
-                                                 NSMinuteCalendarUnit|
-                                                 NSSecondCalendarUnit|
-                                                 NSMonthCalendarUnit|
+
+    NSDateComponents * dc = [utcTime components:(NSHourCalendarUnit |
+                                                 NSMinuteCalendarUnit |
+                                                 NSSecondCalendarUnit |
+                                                 NSMonthCalendarUnit |
                                                  NSYearCalendarUnit) fromDate:date];
-    
+
     // Main variables
     double dElapsedJulianDays;
     double dDecimalHours;
@@ -57,11 +56,11 @@
     double dEclipticObliquity;
     double dRightAscension;
     double dDeclination;
-    
+
     // Auxiliary variables
     double dY;
     double dX;
-    
+
     // Calculate difference in days between the current Julian Day
     // and JD 2451545.0, which is noon 1 January 2000 Universal Time
     {
@@ -73,14 +72,14 @@
         // Calculate current Julian Day
         liAux1 = ([dc month] + 1 - 14) / 12;
         liAux2 = (1461 * ([dc year] + 4800 + liAux1)) / 4
-        + (367 * ([dc month] + 1 - 2 - 12 * liAux1)) / 12
-        - (3 * (([dc year] + 4900 + liAux1) / 100)) / 4
-        + [dc month] - 32075;
+                 + (367 * ([dc month] + 1 - 2 - 12 * liAux1)) / 12
+                 - (3 * (([dc year] + 4900 + liAux1) / 100)) / 4
+                 + [dc month] - 32075;
         dJulianDate = (liAux2) - 0.5 + dDecimalHours / 24.0;
         // Calculate difference between current Julian Day and JD 2451545.0
         dElapsedJulianDays = dJulianDate - 2451545.0;
     }
-    
+
     // Calculate ecliptic coordinates (ecliptic longitude and obliquity of the
     // ecliptic in radians but without limiting the angle to be less than 2*Pi
     // (i.e., the result may be greater than 2*Pi)
@@ -94,7 +93,7 @@
         dEclipticLongitude = dMeanLongitude + 0.03341607 * sin(dMeanAnomaly) + 0.00034894 * sin(2 * dMeanAnomaly) - 0.0001134 - 0.0000203 * sin(dOmega);
         dEclipticObliquity = 0.4090928 - 6.2140e-9 * dElapsedJulianDays + 0.0000396 * cos(dOmega);
     }
-    
+
     // Calculate celestial coordinates ( right ascension and declination ) in radians
     // but without limiting the angle to be less than 2*Pi (i.e., the result
     // may be greater than 2*Pi)
@@ -104,12 +103,14 @@
         dY = cos(dEclipticObliquity) * dSinEclipticLongitude;
         dX = cos(dEclipticLongitude);
         dRightAscension = atan2(dY, dX);
-        if (dRightAscension < 0.0) {
+
+        if ( dRightAscension < 0.0 ) {
             dRightAscension = dRightAscension + 2 * M_PI;
         }
+
         dDeclination = asin(sin(dEclipticObliquity) * dSinEclipticLongitude);
     }
-    
+
     // Calculate local coordinates ( azimuth and zenith angle ) in degrees
     {
         double dGreenwichMeanSiderealTime;
@@ -131,16 +132,19 @@
         dY = -sin(dHourAngle);
         dX = tan(dDeclination) * dCosLatitude - dSinLatitude * dCosHourAngle;
         double azimuth = atan2(dY, dX);
-        if (azimuth < 0.0) {
+
+        if ( azimuth < 0.0 ) {
             azimuth = azimuth + TWOPI;
         }
+
         azimuth = azimuth / RAD;
         // Parallax Correction
         dParallax = (D_EARTH_MEAN_RADIUS / D_ASTRONOMICAL_UNIT) * sin(zenithAngle);
         zenithAngle = (zenithAngle + dParallax) / RAD;
-        
+
         return [PSAOCAzimuthZenithAngle azimuthZenithAngleWithAzimuth:azimuth andZenithAngle:zenithAngle];
     }
-}
+} /* computeSolarPositionWithDate */
+
 
 @end

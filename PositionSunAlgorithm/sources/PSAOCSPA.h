@@ -30,19 +30,33 @@
 @class PSAOCAzimuthZenithAngle;
 
 /*!
- @brief Calculate topocentric solar position, 
- i.e. the location of the sun on the sky for a certain point in time on a
- certain point of the Earth's surface.
- 
- @details This follows the SPA algorithm described in Reda, I.; Andreas, A. (2003): Solar Position Algorithm for Solar
- Radiation Applications. NREL Report No. TP-560-34302, Revised January 2008.
- This is <i>not</i> a port of the C code, but a re-implementation based on the published procedure.
+   @brief Calculate topocentric solar position,
+   i.e. the location of the sun on the sky for a certain point in time on a
+   certain point of the Earth's surface.
+
+   @details This follows the SPA algorithm described in Reda, I.; Andreas, A. (2003): Solar Position Algorithm for Solar
+   Radiation Applications. NREL Report No. TP-560-34302, Revised January 2008.
+   This is <i>not</i> a port of the C code, but a re-implementation based on the published procedure.
  */
 @interface PSAOCSPA : NSObject {
+    // Input Values
     NSDate * _date;
+    double _longitude; // Observer longitude (negative west of Greenwich)
+    double _latitude; // Observer latitude (negative south of equator)
+    double _deltaT; // Difference between earth rotation time and terrestrial time
+    double _elevation; // Observer elevation [meters]
+    double _pressure; // Annual average local pressure [millibars]
+    double _temperature; // Annual average local temperature [degrees Celsius]
+    double _slope; // Surface slope (measured from the horizontal plane)
+    double _azimuthRotation; // Surface azimuth rotation (measured from south to projection of surface normal on horizontal plane, negative west)
+    double _atmosphericRefraction; // Atmospheric refraction at sunrise and sunset (0.5667 deg is typical)
+
+    // Data Structures
     spa_data * _spaData;
+    NSDictionary * _deltaTimes;
 }
 
+- (PSAOCAzimuthZenithAngle *)computeSolarPosition;
 + (PSAOCAzimuthZenithAngle *)computeSolarPositionWithDate:(NSDate *)date longitude:(double)longitude latitude:(double)latitude;
 
 @end

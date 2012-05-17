@@ -28,10 +28,10 @@
 #import <Foundation/Foundation.h>
 
 /*!
- Calculate Julian date for a given point in time. 
- This follows the algorithm described in 
- Reda, I.; Andreas, A. (2003): Solar Position Algorithm for Solar Radiation Applications. 
- NREL Report No. TP-560-34302, Revised January 2008.
+   Calculate Julian date for a given point in time.
+   This follows the algorithm described in
+   Reda, I.; Andreas, A. (2003): Solar Position Algorithm for Solar Radiation Applications.
+   NREL Report No. TP-560-34302, Revised January 2008.
  */
 @interface PSAOCJulianDate : NSObject {
     @private
@@ -44,23 +44,23 @@
 @property (nonatomic, readonly) double julianDate;
 
 /*!
- @brief Construct a Julian date, assuming deltaT to be 0.
- @param date The date to consider
+   @brief Construct a Julian date, assuming deltaT to be 0.
+   @param date The date to consider
  */
 - (id)initWithGregorianCalendar:(NSDate *)date;
 
 
 /*!
- @brief Construct a Julian date, observing deltaT.
+   @brief Construct a Julian date, observing deltaT.
 
- @details deltaT is the difference between earth rotation time and terrestrial time 
- (or Universal Time and Terrestrial Time), in seconds. 
- @see <a href ="http://maia.usno.navy.mil/ser7/deltat.preds">http://maia.usno.navy.mil/ser7/deltat.preds</a> 
- for values. For the year 2011, a reasonably accurate default would be 67.
- 
- @param date The date to consider
- @param deltaT The difference
- 
+   @details deltaT is the difference between earth rotation time and terrestrial time
+   (or Universal Time and Terrestrial Time), in seconds.
+   @see <a href ="http://maia.usno.navy.mil/ser7/deltat.preds">http://maia.usno.navy.mil/ser7/deltat.preds</a>
+   for values. For the year 2011, a reasonably accurate default would be 67.
+
+   @param date The date to consider
+   @param deltaT The difference
+
  */
 - (id)initWithGregorianCalendar:(NSDate *)date andDeltaT:(double)deltaT;
 
@@ -68,11 +68,11 @@
 - (double)julianCentury;
 - (double)julianEphemerisCentury;
 - (double)julianEphemerisMillennium;
-    
+
 @end
 
 
-
+// http://maia.usno.navy.mil/ser7/deltat.preds
 //YEAR    TT-UT PREDICTION  UT1-UTC PREDICTION  ERROR
 //
 //2012.00      66.603             -0.419         0.000
