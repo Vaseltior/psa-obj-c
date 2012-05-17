@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5F85B291564B83D00170C3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F85B281564B83D00170C3C /* Foundation.framework */; };
+		F5F85B2F1564B83D00170C3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5F85B2D1564B83D00170C3C /* InfoPlist.strings */; };
+		F5F85B381564B83D00170C3C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F85B371564B83D00170C3C /* SenTestingKit.framework */; };
+		F5F85B3A1564B83D00170C3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F85B391564B83D00170C3C /* UIKit.framework */; };
+		F5F85B3B1564B83D00170C3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F85B281564B83D00170C3C /* Foundation.framework */; };
+		F5F85B401564B83D00170C3C /* PositionSunAlgorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F85B251564B83D00170C3C /* PositionSunAlgorithm.framework */; };
+		F5F85B411564B83D00170C3C /* PositionSunAlgorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F85B251564B83D00170C3C /* PositionSunAlgorithm.framework */; };
+		F5F85B471564B83D00170C3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5F85B451564B83D00170C3C /* InfoPlist.strings */; };
+		F5F85B4A1564B83D00170C3C /* PositionSunAlgorithmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B491564B83D00170C3C /* PositionSunAlgorithmTests.m */; };
+		F5F85B581564B86600170C3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F85B281564B83D00170C3C /* Foundation.framework */; };
+		F5F85B5E1564B86700170C3C /* PositionSunAlgorithm_SL.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B5D1564B86700170C3C /* PositionSunAlgorithm_SL.m */; };
+		F5F85B651564B8F300170C3C /* PSAOCAzimuthZenithAngle.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B631564B8F300170C3C /* PSAOCAzimuthZenithAngle.h */; };
+		F5F85B661564B8F300170C3C /* PSAOCAzimuthZenithAngle.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B631564B8F300170C3C /* PSAOCAzimuthZenithAngle.h */; };
+		F5F85B671564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */; };
+		F5F85B681564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */; };
+		F5F85B691564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */; };
+		F5F85B6B1564B91500170C3C /* solarpositioning in Resources */ = {isa = PBXBuildFile; fileRef = F5F85B6A1564B91500170C3C /* solarpositioning */; };
+		F5F85B6C1564B91500170C3C /* solarpositioning in Resources */ = {isa = PBXBuildFile; fileRef = F5F85B6A1564B91500170C3C /* solarpositioning */; };
+		F5F85B6F1564BBDE00170C3C /* PSAOCJulianDate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B6D1564BBDE00170C3C /* PSAOCJulianDate.h */; };
+		F5F85B701564BBDE00170C3C /* PSAOCJulianDate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B6D1564BBDE00170C3C /* PSAOCJulianDate.h */; };
+		F5F85B711564BBDE00170C3C /* PSAOCJulianDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B6E1564BBDE00170C3C /* PSAOCJulianDate.m */; };
+		F5F85B721564BBDE00170C3C /* PSAOCJulianDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B6E1564BBDE00170C3C /* PSAOCJulianDate.m */; };
+		F5F85B731564BBDE00170C3C /* PSAOCJulianDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B6E1564BBDE00170C3C /* PSAOCJulianDate.m */; };
+		F5F85B761564D1F100170C3C /* PSAOCSPA.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B741564D1F100170C3C /* PSAOCSPA.h */; };
+		F5F85B771564D1F100170C3C /* PSAOCSPA.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B741564D1F100170C3C /* PSAOCSPA.h */; };
+		F5F85B781564D1F100170C3C /* PSAOCSPA.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B751564D1F100170C3C /* PSAOCSPA.m */; };
+		F5F85B791564D1F100170C3C /* PSAOCSPA.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B751564D1F100170C3C /* PSAOCSPA.m */; };
+		F5F85B7A1564D1F100170C3C /* PSAOCSPA.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B751564D1F100170C3C /* PSAOCSPA.m */; };
+		F5F85B7D1564D2AC00170C3C /* PSAOCPSA.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B7B1564D2AC00170C3C /* PSAOCPSA.h */; };
+		F5F85B7E1564D2AC00170C3C /* PSAOCPSA.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B7B1564D2AC00170C3C /* PSAOCPSA.h */; };
+		F5F85B7F1564D2AC00170C3C /* PSAOCPSA.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B7C1564D2AC00170C3C /* PSAOCPSA.m */; };
+		F5F85B801564D2AC00170C3C /* PSAOCPSA.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B7C1564D2AC00170C3C /* PSAOCPSA.m */; };
+		F5F85B811564D2AC00170C3C /* PSAOCPSA.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B7C1564D2AC00170C3C /* PSAOCPSA.m */; };
+		F5F85BCC1564DF6900170C3C /* spa.c in Sources */ = {isa = PBXBuildFile; fileRef = F5F85BCA1564DF6900170C3C /* spa.c */; };
+		F5F85BCD1564DF6900170C3C /* spa.c in Sources */ = {isa = PBXBuildFile; fileRef = F5F85BCA1564DF6900170C3C /* spa.c */; };
+		F5F85BCE1564DF6900170C3C /* spa.c in Sources */ = {isa = PBXBuildFile; fileRef = F5F85BCA1564DF6900170C3C /* spa.c */; };
+		F5F85BCF1564DF6900170C3C /* spa.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85BCB1564DF6900170C3C /* spa.h */; };
+		F5F85BD01564DF6900170C3C /* spa.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85BCB1564DF6900170C3C /* spa.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5F85B3C1564B83D00170C3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5F85B191564B83D00170C3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5F85B241564B83D00170C3C;
+			remoteInfo = PositionSunAlgorithm;
+		};
+		F5F85B3E1564B83D00170C3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5F85B191564B83D00170C3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5F85B241564B83D00170C3C;
+			remoteInfo = PositionSunAlgorithm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5F85B251564B83D00170C3C /* PositionSunAlgorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = PositionSunAlgorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F85B281564B83D00170C3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5F85B2C1564B83D00170C3C /* PositionSunAlgorithm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PositionSunAlgorithm-Info.plist"; sourceTree = "<group>"; };
+		F5F85B2E1564B83D00170C3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5F85B301564B83D00170C3C /* PositionSunAlgorithm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PositionSunAlgorithm-Prefix.pch"; sourceTree = "<group>"; };
+		F5F85B361564B83D00170C3C /* PositionSunAlgorithmTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositionSunAlgorithmTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F85B371564B83D00170C3C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		F5F85B391564B83D00170C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F5F85B441564B83D00170C3C /* PositionSunAlgorithmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PositionSunAlgorithmTests-Info.plist"; sourceTree = "<group>"; };
+		F5F85B461564B83D00170C3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5F85B481564B83D00170C3C /* PositionSunAlgorithmTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PositionSunAlgorithmTests.h; sourceTree = "<group>"; };
+		F5F85B491564B83D00170C3C /* PositionSunAlgorithmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositionSunAlgorithmTests.m; sourceTree = "<group>"; };
+		F5F85B571564B86600170C3C /* libPositionSunAlgorithm-SL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPositionSunAlgorithm-SL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F85B5B1564B86600170C3C /* PositionSunAlgorithm-SL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PositionSunAlgorithm-SL-Prefix.pch"; sourceTree = "<group>"; };
+		F5F85B5C1564B86700170C3C /* PositionSunAlgorithm_SL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PositionSunAlgorithm_SL.h; sourceTree = "<group>"; };
+		F5F85B5D1564B86700170C3C /* PositionSunAlgorithm_SL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositionSunAlgorithm_SL.m; sourceTree = "<group>"; };
+		F5F85B631564B8F300170C3C /* PSAOCAzimuthZenithAngle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCAzimuthZenithAngle.h; sourceTree = "<group>"; };
+		F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAOCAzimuthZenithAngle.m; sourceTree = "<group>"; };
+		F5F85B6A1564B91500170C3C /* solarpositioning */ = {isa = PBXFileReference; lastKnownFileType = folder; path = solarpositioning; sourceTree = "<group>"; };
+		F5F85B6D1564BBDE00170C3C /* PSAOCJulianDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCJulianDate.h; sourceTree = "<group>"; };
+		F5F85B6E1564BBDE00170C3C /* PSAOCJulianDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAOCJulianDate.m; sourceTree = "<group>"; };
+		F5F85B741564D1F100170C3C /* PSAOCSPA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCSPA.h; sourceTree = "<group>"; };
+		F5F85B751564D1F100170C3C /* PSAOCSPA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAOCSPA.m; sourceTree = "<group>"; };
+		F5F85B7B1564D2AC00170C3C /* PSAOCPSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCPSA.h; sourceTree = "<group>"; };
+		F5F85B7C1564D2AC00170C3C /* PSAOCPSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAOCPSA.m; sourceTree = "<group>"; };
+		F5F85BCA1564DF6900170C3C /* spa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spa.c; sourceTree = "<group>"; };
+		F5F85BCB1564DF6900170C3C /* spa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spa.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5F85B201564B83D00170C3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B291564B83D00170C3C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F85B321564B83D00170C3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B381564B83D00170C3C /* SenTestingKit.framework in Frameworks */,
+				F5F85B3A1564B83D00170C3C /* UIKit.framework in Frameworks */,
+				F5F85B3B1564B83D00170C3C /* Foundation.framework in Frameworks */,
+				F5F85B401564B83D00170C3C /* PositionSunAlgorithm.framework in Frameworks */,
+				F5F85B411564B83D00170C3C /* PositionSunAlgorithm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F85B541564B86600170C3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B581564B86600170C3C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5F85B171564B83D00170C3C = {
+			isa = PBXGroup;
+			children = (
+				F5F85B6A1564B91500170C3C /* solarpositioning */,
+				F5F85B621564B8AD00170C3C /* sources */,
+				F5F85B2A1564B83D00170C3C /* PositionSunAlgorithm */,
+				F5F85B421564B83D00170C3C /* PositionSunAlgorithmTests */,
+				F5F85B591564B86600170C3C /* PositionSunAlgorithm-SL */,
+				F5F85B271564B83D00170C3C /* Frameworks */,
+				F5F85B261564B83D00170C3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5F85B261564B83D00170C3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B251564B83D00170C3C /* PositionSunAlgorithm.framework */,
+				F5F85B361564B83D00170C3C /* PositionSunAlgorithmTests.octest */,
+				F5F85B571564B86600170C3C /* libPositionSunAlgorithm-SL.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5F85B271564B83D00170C3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B281564B83D00170C3C /* Foundation.framework */,
+				F5F85B371564B83D00170C3C /* SenTestingKit.framework */,
+				F5F85B391564B83D00170C3C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5F85B2A1564B83D00170C3C /* PositionSunAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B2B1564B83D00170C3C /* Supporting Files */,
+			);
+			path = PositionSunAlgorithm;
+			sourceTree = "<group>";
+		};
+		F5F85B2B1564B83D00170C3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B2C1564B83D00170C3C /* PositionSunAlgorithm-Info.plist */,
+				F5F85B2D1564B83D00170C3C /* InfoPlist.strings */,
+				F5F85B301564B83D00170C3C /* PositionSunAlgorithm-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5F85B421564B83D00170C3C /* PositionSunAlgorithmTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B481564B83D00170C3C /* PositionSunAlgorithmTests.h */,
+				F5F85B491564B83D00170C3C /* PositionSunAlgorithmTests.m */,
+				F5F85B431564B83D00170C3C /* Supporting Files */,
+			);
+			path = PositionSunAlgorithmTests;
+			sourceTree = "<group>";
+		};
+		F5F85B431564B83D00170C3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B441564B83D00170C3C /* PositionSunAlgorithmTests-Info.plist */,
+				F5F85B451564B83D00170C3C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5F85B591564B86600170C3C /* PositionSunAlgorithm-SL */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B5C1564B86700170C3C /* PositionSunAlgorithm_SL.h */,
+				F5F85B5D1564B86700170C3C /* PositionSunAlgorithm_SL.m */,
+				F5F85B5A1564B86600170C3C /* Supporting Files */,
+			);
+			path = "PositionSunAlgorithm-SL";
+			sourceTree = "<group>";
+		};
+		F5F85B5A1564B86600170C3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85B5B1564B86600170C3C /* PositionSunAlgorithm-SL-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5F85B621564B8AD00170C3C /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85BC91564DF6900170C3C /* c-sources */,
+				F5F85B631564B8F300170C3C /* PSAOCAzimuthZenithAngle.h */,
+				F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */,
+				F5F85B6D1564BBDE00170C3C /* PSAOCJulianDate.h */,
+				F5F85B6E1564BBDE00170C3C /* PSAOCJulianDate.m */,
+				F5F85B7B1564D2AC00170C3C /* PSAOCPSA.h */,
+				F5F85B7C1564D2AC00170C3C /* PSAOCPSA.m */,
+				F5F85B741564D1F100170C3C /* PSAOCSPA.h */,
+				F5F85B751564D1F100170C3C /* PSAOCSPA.m */,
+			);
+			path = sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		F5F85BC91564DF6900170C3C /* c-sources */ = {
+			isa = PBXGroup;
+			children = (
+				F5F85BCB1564DF6900170C3C /* spa.h */,
+				F5F85BCA1564DF6900170C3C /* spa.c */,
+			);
+			path = "c-sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F5F85B211564B83D00170C3C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B651564B8F300170C3C /* PSAOCAzimuthZenithAngle.h in Headers */,
+				F5F85B6F1564BBDE00170C3C /* PSAOCJulianDate.h in Headers */,
+				F5F85B761564D1F100170C3C /* PSAOCSPA.h in Headers */,
+				F5F85B7D1564D2AC00170C3C /* PSAOCPSA.h in Headers */,
+				F5F85BCF1564DF6900170C3C /* spa.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F85B551564B86600170C3C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B661564B8F300170C3C /* PSAOCAzimuthZenithAngle.h in Headers */,
+				F5F85B701564BBDE00170C3C /* PSAOCJulianDate.h in Headers */,
+				F5F85B771564D1F100170C3C /* PSAOCSPA.h in Headers */,
+				F5F85B7E1564D2AC00170C3C /* PSAOCPSA.h in Headers */,
+				F5F85BD01564DF6900170C3C /* spa.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F5F85B241564B83D00170C3C /* PositionSunAlgorithm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F85B4D1564B83D00170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithm" */;
+			buildPhases = (
+				F5F85B1E1564B83D00170C3C /* ShellScript */,
+				F5F85B1F1564B83D00170C3C /* Sources */,
+				F5F85B201564B83D00170C3C /* Frameworks */,
+				F5F85B211564B83D00170C3C /* Headers */,
+				F5F85B221564B83D00170C3C /* Resources */,
+				F5F85B231564B83D00170C3C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PositionSunAlgorithm;
+			productName = PositionSunAlgorithm;
+			productReference = F5F85B251564B83D00170C3C /* PositionSunAlgorithm.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+		F5F85B351564B83D00170C3C /* PositionSunAlgorithmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F85B501564B83D00170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithmTests" */;
+			buildPhases = (
+				F5F85B311564B83D00170C3C /* Sources */,
+				F5F85B321564B83D00170C3C /* Frameworks */,
+				F5F85B331564B83D00170C3C /* Resources */,
+				F5F85B341564B83D00170C3C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5F85B3D1564B83D00170C3C /* PBXTargetDependency */,
+				F5F85B3F1564B83D00170C3C /* PBXTargetDependency */,
+			);
+			name = PositionSunAlgorithmTests;
+			productName = PositionSunAlgorithmTests;
+			productReference = F5F85B361564B83D00170C3C /* PositionSunAlgorithmTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F5F85B561564B86600170C3C /* PositionSunAlgorithm-SL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F85B5F1564B86700170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithm-SL" */;
+			buildPhases = (
+				F5F85B531564B86600170C3C /* Sources */,
+				F5F85B541564B86600170C3C /* Frameworks */,
+				F5F85B551564B86600170C3C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PositionSunAlgorithm-SL";
+			productName = "PositionSunAlgorithm-SL";
+			productReference = F5F85B571564B86600170C3C /* libPositionSunAlgorithm-SL.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5F85B191564B83D00170C3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Samuel Grau";
+			};
+			buildConfigurationList = F5F85B1C1564B83D00170C3C /* Build configuration list for PBXProject "PositionSunAlgorithm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5F85B171564B83D00170C3C;
+			productRefGroup = F5F85B261564B83D00170C3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5F85B241564B83D00170C3C /* PositionSunAlgorithm */,
+				F5F85B351564B83D00170C3C /* PositionSunAlgorithmTests */,
+				F5F85B561564B86600170C3C /* PositionSunAlgorithm-SL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5F85B221564B83D00170C3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B2F1564B83D00170C3C /* InfoPlist.strings in Resources */,
+				F5F85B6B1564B91500170C3C /* solarpositioning in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F85B331564B83D00170C3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B471564B83D00170C3C /* InfoPlist.strings in Resources */,
+				F5F85B6C1564B91500170C3C /* solarpositioning in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F5F85B1E1564B83D00170C3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+		};
+		F5F85B231564B83D00170C3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+		};
+		F5F85B341564B83D00170C3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5F85B1F1564B83D00170C3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B671564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */,
+				F5F85B711564BBDE00170C3C /* PSAOCJulianDate.m in Sources */,
+				F5F85B781564D1F100170C3C /* PSAOCSPA.m in Sources */,
+				F5F85B7F1564D2AC00170C3C /* PSAOCPSA.m in Sources */,
+				F5F85BCC1564DF6900170C3C /* spa.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F85B311564B83D00170C3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B4A1564B83D00170C3C /* PositionSunAlgorithmTests.m in Sources */,
+				F5F85B681564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */,
+				F5F85B721564BBDE00170C3C /* PSAOCJulianDate.m in Sources */,
+				F5F85B791564D1F100170C3C /* PSAOCSPA.m in Sources */,
+				F5F85B801564D2AC00170C3C /* PSAOCPSA.m in Sources */,
+				F5F85BCD1564DF6900170C3C /* spa.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F85B531564B86600170C3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F85B5E1564B86700170C3C /* PositionSunAlgorithm_SL.m in Sources */,
+				F5F85B691564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */,
+				F5F85B731564BBDE00170C3C /* PSAOCJulianDate.m in Sources */,
+				F5F85B7A1564D1F100170C3C /* PSAOCSPA.m in Sources */,
+				F5F85B811564D2AC00170C3C /* PSAOCPSA.m in Sources */,
+				F5F85BCE1564DF6900170C3C /* spa.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5F85B3D1564B83D00170C3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5F85B241564B83D00170C3C /* PositionSunAlgorithm */;
+			targetProxy = F5F85B3C1564B83D00170C3C /* PBXContainerItemProxy */;
+		};
+		F5F85B3F1564B83D00170C3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5F85B241564B83D00170C3C /* PositionSunAlgorithm */;
+			targetProxy = F5F85B3E1564B83D00170C3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5F85B2D1564B83D00170C3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F85B2E1564B83D00170C3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F5F85B451564B83D00170C3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F85B461564B83D00170C3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5F85B4B1564B83D00170C3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F5F85B4C1564B83D00170C3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5F85B4E1564B83D00170C3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PositionSunAlgorithm/PositionSunAlgorithm-Prefix.pch";
+				INFOPLIST_FILE = "PositionSunAlgorithm/PositionSunAlgorithm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		F5F85B4F1564B83D00170C3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PositionSunAlgorithm/PositionSunAlgorithm-Prefix.pch";
+				INFOPLIST_FILE = "PositionSunAlgorithm/PositionSunAlgorithm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		F5F85B511564B83D00170C3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PositionSunAlgorithm/PositionSunAlgorithm-Prefix.pch";
+				INFOPLIST_FILE = "PositionSunAlgorithmTests/PositionSunAlgorithmTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F5F85B521564B83D00170C3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PositionSunAlgorithm/PositionSunAlgorithm-Prefix.pch";
+				INFOPLIST_FILE = "PositionSunAlgorithmTests/PositionSunAlgorithmTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		F5F85B601564B86700170C3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PositionSunAlgorithm_SL.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PositionSunAlgorithm-SL/PositionSunAlgorithm-SL-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F5F85B611564B86700170C3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PositionSunAlgorithm_SL.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PositionSunAlgorithm-SL/PositionSunAlgorithm-SL-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5F85B1C1564B83D00170C3C /* Build configuration list for PBXProject "PositionSunAlgorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F85B4B1564B83D00170C3C /* Debug */,
+				F5F85B4C1564B83D00170C3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F85B4D1564B83D00170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F85B4E1564B83D00170C3C /* Debug */,
+				F5F85B4F1564B83D00170C3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5F85B501564B83D00170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F85B511564B83D00170C3C /* Debug */,
+				F5F85B521564B83D00170C3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5F85B5F1564B86700170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithm-SL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F85B601564B86700170C3C /* Debug */,
+				F5F85B611564B86700170C3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5F85B191564B83D00170C3C /* Project object */;
+}
