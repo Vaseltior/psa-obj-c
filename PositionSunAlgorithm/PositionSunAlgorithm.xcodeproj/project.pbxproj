@@ -45,6 +45,8 @@
 		F5F85BCE1564DF6900170C3C /* spa.c in Sources */ = {isa = PBXBuildFile; fileRef = F5F85BCA1564DF6900170C3C /* spa.c */; };
 		F5F85BCF1564DF6900170C3C /* spa.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85BCB1564DF6900170C3C /* spa.h */; };
 		F5F85BD01564DF6900170C3C /* spa.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85BCB1564DF6900170C3C /* spa.h */; };
+		F5F85BF71565018F00170C3C /* PSAOCHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85BF61565018F00170C3C /* PSAOCHeader.h */; };
+		F5F85BF81565018F00170C3C /* PSAOCHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85BF61565018F00170C3C /* PSAOCHeader.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,7 @@
 		F5F85B7C1564D2AC00170C3C /* PSAOCPSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAOCPSA.m; sourceTree = "<group>"; };
 		F5F85BCA1564DF6900170C3C /* spa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spa.c; sourceTree = "<group>"; };
 		F5F85BCB1564DF6900170C3C /* spa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spa.h; sourceTree = "<group>"; };
+		F5F85BF61565018F00170C3C /* PSAOCHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,7 @@
 				F5F85B7C1564D2AC00170C3C /* PSAOCPSA.m */,
 				F5F85B741564D1F100170C3C /* PSAOCSPA.h */,
 				F5F85B751564D1F100170C3C /* PSAOCSPA.m */,
+				F5F85BF61565018F00170C3C /* PSAOCHeader.h */,
 			);
 			path = sources;
 			sourceTree = SOURCE_ROOT;
@@ -251,6 +255,7 @@
 				F5F85B761564D1F100170C3C /* PSAOCSPA.h in Headers */,
 				F5F85B7D1564D2AC00170C3C /* PSAOCPSA.h in Headers */,
 				F5F85BCF1564DF6900170C3C /* spa.h in Headers */,
+				F5F85BF71565018F00170C3C /* PSAOCHeader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +268,7 @@
 				F5F85B771564D1F100170C3C /* PSAOCSPA.h in Headers */,
 				F5F85B7E1564D2AC00170C3C /* PSAOCPSA.h in Headers */,
 				F5F85BD01564DF6900170C3C /* spa.h in Headers */,
+				F5F85BF81565018F00170C3C /* PSAOCHeader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +640,7 @@
 				F5F85B4F1564B83D00170C3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F85B501564B83D00170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithmTests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +649,7 @@
 				F5F85B521564B83D00170C3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F85B5F1564B86700170C3C /* Build configuration list for PBXNativeTarget "PositionSunAlgorithm-SL" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +658,7 @@
 				F5F85B611564B86700170C3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
