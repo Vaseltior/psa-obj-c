@@ -137,8 +137,8 @@
         self->_date = [[NSDate date] retain];
         [self createSpaDataStructure];
 
-        self->_longitude = 48;
-        self->_latitude = 2;
+        self->_longitude = 2;
+        self->_latitude = 48;
         self->_deltaT = 0.0f;
         self->_elevation = 0.0f;
         self->_pressure = 0.0f;
