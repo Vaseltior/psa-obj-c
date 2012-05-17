@@ -3,7 +3,7 @@
 //  PositionSunAlgorithm
 //
 //  Created by Samuel Grau on 5/17/12.
-//  Copyright (c) 2012 Samuel Grau. 
+//  Copyright (c) 2012 Samuel Grau.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining
 //  a copy of this software and associated documentation files (the
@@ -41,27 +41,34 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (id)init {
     self = [super init];
-    if (self) {
+
+    if ( self ) {
         self->_azimuth = 0.0f;
         self->_zenithAngle = 0.0f;
     }
+
     return self;
-}
+} /* init */
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (id)initWithAzimuth:(double)azimuth andZenithAngle:(double)zenithAngle {
     self = [super init];
-    if (self) {
+
+    if ( self ) {
         self->_azimuth = azimuth;
         self->_zenithAngle = zenithAngle;
     }
+
     return self;
-}
+} /* initWithAzimuth */
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 + (PSAOCAzimuthZenithAngle *)azimuthZenithAngleWithAzimuth:(double)azimuth andZenithAngle:(double)zenithAngle {
     return [[[PSAOCAzimuthZenithAngle alloc] initWithAzimuth:azimuth andZenithAngle:zenithAngle] autorelease];
 }
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #pragma mark -
@@ -71,10 +78,11 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (NSString *)description {
-    NSString * s = [[NSString alloc] initWithFormat:@"azimuth %.6f deg, zenith angle %.6f deg", 
-                    self->_azimuth, 
+    NSString * s = [[NSString alloc] initWithFormat:@"azimuth %.6f deg, zenith angle %.6f deg",
+                    self->_azimuth,
                     self->_zenithAngle];
     return [s autorelease];
-}
+} /* description */
+
 
 @end

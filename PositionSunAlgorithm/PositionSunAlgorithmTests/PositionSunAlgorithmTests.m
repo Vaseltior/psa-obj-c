@@ -40,6 +40,7 @@
     [jd release];
     
     PSAOCSPA * spaComputer = [[PSAOCSPA alloc] init];
+    [spaComputer computeSolarPosition];
     [spaComputer release];
 }
 

@@ -3,7 +3,7 @@
 //  PositionSunAlgorithm
 //
 //  Created by Samuel Grau on 5/17/12.
-//  Copyright (c) 2012 Samuel Grau. 
+//  Copyright (c) 2012 Samuel Grau.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining
 //  a copy of this software and associated documentation files (the
@@ -27,10 +27,10 @@
 #import <Foundation/Foundation.h>
 
 /*!
- A simple wrapper class for keeping an azimuth/zenith angle pair of values.
+   A simple wrapper class for keeping an azimuth/zenith angle pair of values.
  */
 @interface PSAOCAzimuthZenithAngle : NSObject {
-@private
+    @private
     double _azimuth;
     double _zenithAngle;
 }
