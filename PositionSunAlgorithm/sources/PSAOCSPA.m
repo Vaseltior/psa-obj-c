@@ -265,7 +265,7 @@
     // valid range: -8000 to 8000 seconds, error code: 7
     NSTimeZone * tz = [[NSCalendar currentCalendar] timeZone];
     // Observer time zone (negative west of Greenwich)
-    self->_spaData->timezone = (double)[tz secondsFromGMTForDate:self->_date];
+    self->_spaData->timezone = (double)[tz secondsFromGMTForDate:self->_date]/3600.0f;
 
     // valid range: -12 to 12 hours, error code: 8
     // Observer longitude (negative west of Greenwich)
