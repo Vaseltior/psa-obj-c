@@ -25,6 +25,7 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import "PSAOCSPA.h"
+#import "PSAOCAzimuthZenithAngle.h"
 
 @interface PSAOCSPA ()
 
@@ -300,12 +301,15 @@
     self->_spaData->atmos_refract = self->_atmosphericRefraction;
 
     // valid range: -5 to 5 degrees, error code: 16
-    //int function; // Switch to choose functions for desired output (from enumeration)*/
+    self->_spaData->function = SPA_ALL; // Switch to choose functions for desired output (from enumeration)
 
     int result = spa_calculate(self->_spaData);
-    NSLog(@"%i", result);
-
-    return nil;
+    
+    if (result) {
+        return [PSAOCAzimuthZenithAngle azimuthZenithAngleWithAzimuth:self->_spaData->azimuth andZenithAngle:self->_spaData->zenith];
+    } else {
+        return nil;
+    }
 } /* computeSolarPosition */
 
 
