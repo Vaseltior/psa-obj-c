@@ -25,6 +25,7 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#include "spa.h"
 
 @class PSAOCAzimuthZenithAngle;
 
@@ -37,7 +38,10 @@
  Radiation Applications. NREL Report No. TP-560-34302, Revised January 2008.
  This is <i>not</i> a port of the C code, but a re-implementation based on the published procedure.
  */
-@interface PSAOCSPA : NSObject
+@interface PSAOCSPA : NSObject {
+    NSDate * _date;
+    spa_data * _spaData;
+}
 
 + (PSAOCAzimuthZenithAngle *)computeSolarPositionWithDate:(NSDate *)date longitude:(double)longitude latitude:(double)latitude;
 

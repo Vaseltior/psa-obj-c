@@ -25,10 +25,37 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import "PSAOCSPA.h"
-#include "spa.h"
+
+
+@interface PSAOCSPA()
+
+- (void)createSpaDataStructure;
+- (void)destroySpaDataStructure;
+
+@end
 
 @implementation PSAOCSPA
 
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#pragma mark -
+#pragma mark Private Methods
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- (void)destroySpaDataStructure {
+    if (self->_spaData) {
+        free(self->_spaData);
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- (void)createSpaDataStructure {
+    [self destroySpaDataStructure];
+    self->_spaData = malloc(sizeof(spa_data));
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #pragma mark -
@@ -40,12 +67,30 @@
 - (id)init {
     self = [super init];
     if (self) {
-        spa_data * data = malloc(sizeof(spa_data));
-        int result = spa_calculate(data);
+        self->_date = [[NSDate date] retain];
+        [self createSpaDataStructure];
+        int result = spa_calculate(self->_spaData);
         NSLog(@"%i", result);
-        free(data);
     }
     return self;
+}
+
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#pragma mark -
+#pragma mark Memory Management
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- (void)dealloc {
+    [self->_date release]; self->_date = nil;
+    
+    // Cleaning up the spa_data structure if needed
+    [self destroySpaDataStructure];
+    
+    [super dealloc];
 }
 
 
