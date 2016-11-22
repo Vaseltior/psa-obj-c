@@ -109,8 +109,8 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (NSInteger)dayOfYear {
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSUInteger dayOfYear = [gregorian ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:self->_date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSUInteger dayOfYear = [gregorian ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:self->_date];
     [gregorian release];
     return dayOfYear;
 } /* dayOfYear */
@@ -118,8 +118,8 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (NSUInteger)numberOfdaysInYear {
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSRange days = [gregorian rangeOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:self->_date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSRange days = [gregorian rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:self->_date];
     return days.length;
 } /* numberOfdaysInYear */
 
@@ -195,12 +195,12 @@
     NSAssert(self->_date, @"This object should have a date", nil);
 
     NSCalendar * currentCalendar = [NSCalendar currentCalendar];
-    NSDateComponents * dc = [currentCalendar components:(NSYearCalendarUnit |
-                                                         NSMonthCalendarUnit |
-                                                         NSDayCalendarUnit |
-                                                         NSHourCalendarUnit |
-                                                         NSMinuteCalendarUnit |
-                                                         NSSecondCalendarUnit) fromDate:self->_date];
+    NSDateComponents * dc = [currentCalendar components:(NSCalendarUnitYear |
+                                                         NSCalendarUnitMonth |
+                                                         NSCalendarUnitDay |
+                                                         NSCalendarUnitHour |
+                                                         NSCalendarUnitMinute |
+                                                         NSCalendarUnitSecond) fromDate:self->_date];
     return dc;
 } /* suitableComponents */
 
@@ -215,22 +215,22 @@
     NSDateComponents * dc = [self suitableComponents];
 
     // 4-digit year, valid range: -2000 to 6000, error code: 1
-    self->_spaData->year = [dc year];
+    self->_spaData->year = (int) [dc year];
 
     // 2-digit month, valid range: 1 to 12, error code: 2
-    self->_spaData->month = [dc month];
+    self->_spaData->month = (int) [dc month];
 
     // 2-digit day, valid range: 1 to 31, error code: 3
-    self->_spaData->day = [dc day];
+    self->_spaData->day = (int) [dc day];
     // Observer local hour, valid range: 0 to 24, error code: 4
 
-    self->_spaData->hour = [dc hour];
+    self->_spaData->hour = (int) [dc hour];
     // Observer local minute, valid range: 0 to 59, error code: 5
 
-    self->_spaData->minute = [dc minute];
+    self->_spaData->minute = (int) [dc minute];
 
     // Observer local second, valid range: 0 to 59, error code: 6
-    self->_spaData->second = [dc second];
+    self->_spaData->second = (int) [dc second];
 
     // We now set the delta time if we can
     // Difference between earth rotation time and terrestrial time

@@ -39,15 +39,15 @@
 + (PSAOCAzimuthZenithAngle *)computeSolarPositionWithDate:(NSDate *)date
                                                  latitude:(double)latitude
                                                 longitude:(double)longitude {
-    NSCalendar * utcTime = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar * utcTime = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSTimeZone * zone = [NSTimeZone timeZoneWithName:@"GMT"];
     [utcTime setTimeZone:zone];
 
-    NSDateComponents * dc = [utcTime components:(NSHourCalendarUnit |
-                                                 NSMinuteCalendarUnit |
-                                                 NSSecondCalendarUnit |
-                                                 NSMonthCalendarUnit |
-                                                 NSYearCalendarUnit) fromDate:date];
+    NSDateComponents * dc = [utcTime components:(NSCalendarUnitHour |
+                                                 NSCalendarUnitMinute |
+                                                 NSCalendarUnitSecond |
+                                                 NSCalendarUnitMonth |
+                                                 NSCalendarUnitYear) fromDate:date];
 
     // Main variables
     double dElapsedJulianDays;
