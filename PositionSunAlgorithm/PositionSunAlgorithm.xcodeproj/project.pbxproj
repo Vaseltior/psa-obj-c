@@ -22,8 +22,6 @@
 		F5F85B671564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */; };
 		F5F85B681564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */; };
 		F5F85B691564B8F300170C3C /* PSAOCAzimuthZenithAngle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */; };
-		F5F85B6B1564B91500170C3C /* solarpositioning in Resources */ = {isa = PBXBuildFile; fileRef = F5F85B6A1564B91500170C3C /* solarpositioning */; };
-		F5F85B6C1564B91500170C3C /* solarpositioning in Resources */ = {isa = PBXBuildFile; fileRef = F5F85B6A1564B91500170C3C /* solarpositioning */; };
 		F5F85B6F1564BBDE00170C3C /* PSAOCJulianDate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B6D1564BBDE00170C3C /* PSAOCJulianDate.h */; };
 		F5F85B701564BBDE00170C3C /* PSAOCJulianDate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F85B6D1564BBDE00170C3C /* PSAOCJulianDate.h */; };
 		F5F85B711564BBDE00170C3C /* PSAOCJulianDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F85B6E1564BBDE00170C3C /* PSAOCJulianDate.m */; };
@@ -84,7 +82,6 @@
 		F5F85B5D1564B86700170C3C /* PositionSunAlgorithm_SL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositionSunAlgorithm_SL.m; sourceTree = "<group>"; };
 		F5F85B631564B8F300170C3C /* PSAOCAzimuthZenithAngle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCAzimuthZenithAngle.h; sourceTree = "<group>"; };
 		F5F85B641564B8F300170C3C /* PSAOCAzimuthZenithAngle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAOCAzimuthZenithAngle.m; sourceTree = "<group>"; };
-		F5F85B6A1564B91500170C3C /* solarpositioning */ = {isa = PBXFileReference; lastKnownFileType = folder; path = solarpositioning; sourceTree = "<group>"; };
 		F5F85B6D1564BBDE00170C3C /* PSAOCJulianDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCJulianDate.h; sourceTree = "<group>"; };
 		F5F85B6E1564BBDE00170C3C /* PSAOCJulianDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAOCJulianDate.m; sourceTree = "<group>"; };
 		F5F85B741564D1F100170C3C /* PSAOCSPA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAOCSPA.h; sourceTree = "<group>"; };
@@ -130,7 +127,6 @@
 		F5F85B171564B83D00170C3C = {
 			isa = PBXGroup;
 			children = (
-				F5F85B6A1564B91500170C3C /* solarpositioning */,
 				F5F85B621564B8AD00170C3C /* sources */,
 				F5F85B2A1564B83D00170C3C /* PositionSunAlgorithm */,
 				F5F85B421564B83D00170C3C /* PositionSunAlgorithmTests */,
@@ -364,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5F85B2F1564B83D00170C3C /* InfoPlist.strings in Resources */,
-				F5F85B6B1564B91500170C3C /* solarpositioning in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5F85B471564B83D00170C3C /* InfoPlist.strings in Resources */,
-				F5F85B6C1564B91500170C3C /* solarpositioning in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
