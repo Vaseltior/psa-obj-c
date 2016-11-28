@@ -100,15 +100,15 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (double)computeJulianDate {
-    NSDateComponents * dc = [self->_gregorianCalendar components:(NSEraCalendarUnit |
-                                                                  NSYearCalendarUnit |
-                                                                  NSMonthCalendarUnit |
-                                                                  NSDayCalendarUnit |
-                                                                  NSHourCalendarUnit |
-                                                                  NSMinuteCalendarUnit |
-                                                                  NSSecondCalendarUnit) fromDate:self->_date];
-    int y = ([dc era] > 0) ?[dc year] : -[dc year];
-    int m = [dc month] + 1;
+    NSDateComponents * dc = [self->_gregorianCalendar components:(NSCalendarUnitEra |
+                                                                  NSCalendarUnitYear |
+                                                                  NSCalendarUnitMonth |
+                                                                  NSCalendarUnitDay |
+                                                                  NSCalendarUnitHour |
+                                                                  NSCalendarUnitMinute |
+                                                                  NSCalendarUnitSecond) fromDate:self->_date];
+    NSInteger y = ([dc era] > 0) ?[dc year] : -[dc year];
+    NSInteger m = [dc month] + 1;
 
     if ( m < 3 ) {
         y = y - 1;
@@ -126,7 +126,7 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (NSCalendar *)createGMTCalendar {
-    NSCalendar * utcCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar * utcCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSTimeZone * zone = [NSTimeZone timeZoneWithName:@"GMT"];
     [utcCalendar setTimeZone:zone];
     return [utcCalendar autorelease];
